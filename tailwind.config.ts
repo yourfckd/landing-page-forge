@@ -14,8 +14,12 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ["Space Grotesk", "sans-serif"],
+        display: ["Sora", "sans-serif"],
         body: ["Inter", "sans-serif"],
+      },
+      fontSize: {
+        "hero": ["clamp(3rem, 6vw, 6rem)", { lineHeight: "1.05", fontWeight: "800" }],
+        "section": ["clamp(2.25rem, 3.5vw, 3rem)", { lineHeight: "1.15", fontWeight: "700" }],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -66,6 +70,8 @@ export default {
         },
       },
       borderRadius: {
+        "2xl": "1.25rem",
+        xl: "1rem",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",

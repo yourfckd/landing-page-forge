@@ -8,23 +8,25 @@ const WhoThisIsForSection = () => {
   ];
 
   return (
-    <section className="py-24 px-6">
+    <section className="py-28 sm:py-36 px-6 gradient-section noise-overlay">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+        <h2 className="text-section mb-5 scroll-fade">
           Who This Is <span className="text-gradient">For</span>
         </h2>
-        <p className="text-muted-foreground text-lg mb-12">
+        <p className="text-muted-foreground text-lg mb-16 scroll-fade">
           For high-functioning humans having a quiet crisis.
         </p>
 
-        <div className="space-y-3">
+        <div className="space-y-4">
           {traits.map((trait, i) => (
             <div
               key={trait}
-              className="bg-card border border-border rounded-lg px-6 py-4 text-foreground/90 text-lg transition-colors hover:border-primary/40"
-              style={{ animationDelay: `${i * 0.1}s` }}
+              className="card-premium text-left scroll-fade"
+              style={{ transitionDelay: `${i * 0.08}s` }}
             >
-              People who {trait.toLowerCase()}
+              <p className="text-foreground/90 text-lg">
+                People who {trait.toLowerCase()}
+              </p>
             </div>
           ))}
         </div>
